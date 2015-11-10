@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="assets/css/main.css" />
+<title>Year test</title>
+
+
+<script>
+var animLength = 1;
+
+<!-- Function to bring image onto screen -->
+function slideInYear(el){
+console.log("sliding in year "+el);
+var elem = document.getElementById(el);
+elem.style.transition = "left "+animLength+"s linear 0s";
+elem.style.left = "50px";
+//elem.style.transition = "opacity "+animLength+"s linear 0s";
+elem.style.opacity = ".9";
+}
+
+<!-- Function to send image back off screen -->
+function slideOutYear(el){
+var elem = document.getElementById(el);
+elem.style.transition = "left "+animLength*.8+"s linear 0s";
+elem.style.left = "-800px";
+//elem.style.transition = "opacity "+animLength+"s linear 0s";
+elem.style.opacity = ".5";
+}
+
+<!-- 1950 function brings 1950 image on screen and makes sure all others are sent off -->
+function year1950() {
+slideInYear('year_1950'),
+slideOutYear('year_1960'),
+slideOutYear('year_1970'),
+slideOutYear('year_1980'),
+slideOutYear('year_1990')
+}
+
+<!-- 1960 function brings 1960 image on screen and makes sure all others are sent off -->
+function year1960() {
+slideInYear('year_1960'),
+slideOutYear('year_1950'),
+slideOutYear('year_1970'),
+slideOutYear('year_1980'),
+slideOutYear('year_1990')
+}
+
+function year1970() {
+slideInYear('year_1970'),
+slideOutYear('year_1960'),
+slideOutYear('year_1950'),
+slideOutYear('year_1980'),
+slideOutYear('year_1990')
+}
+
+function year1980() {
+slideInYear('year_1980'),
+slideOutYear('year_1960'),
+slideOutYear('year_1970'),
+slideOutYear('year_1950'),
+slideOutYear('year_1990')
+}
+
+function year1990() {
+slideInYear('year_1990'),
+slideOutYear('year_1960'),
+slideOutYear('year_1970'),
+slideOutYear('year_1980'),
+slideOutYear('year_1950')
+}
+
+
+</script>
+<style>
+/*This code makes sure the five images are held off screen until needed */
+div#year_1950 {position:absolute;top:0px;left:-800px;
+background-color: #6996AD;                 
+}
+div#year_1960 {position:absolute;top:0px;left:-800px;
+background-color: #507786;                 
+}
+div#year_1970 {position:absolute;top:0px;left:-800px;
+background-color: #525C65;                 
+}
+div#year_1980 {position:absolute;top:0px;left:-800px;
+background-color: #B7C3D0
+}
+div#year_1990 {position:absolute;top:0px;left:-800px;
+background-color: #687C97;
+}
+
+
+.display-block {
+width: 800px;
+height: 500px;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<!-- These five divs are hidden off the left of the screen -->
+<div id="year_1950" class = "display-block">1950</div>
+<div id="year_1960" class = "display-block">how bout you</div>
+<div id="year_1970" class = "display-block">im good</div>
+<div id="year_1980" class = "display-block">how are you</div>
+<div id="year_1990" class = "display-block">hi there</div>
+
+<!-- These five divs have the dates that the user clicks to bring the image on screen -->
+<div><a href="javascript:void(0);" onclick="year1950()">1950</a></div>
+<div><a href="javascript:void(0);" onclick="year1960()">1960</a></div>
+<div><a href="javascript:void(0);" onclick="year1970()">1970</a></div>
+<div><a href="javascript:void(0);" onclick="year1980()">1980</a></div>
+<div><a href="javascript:void(0);" onclick="year1990()">1990</a></div>
+
+
+<script src="http://www.dtwdev.co.uk/new/js/jquery.min.js"></script>
+<script src='http://www.dtwdev.co.uk/new/js/css3-animate-it.js'></script>
+</body>
+</html
+>
