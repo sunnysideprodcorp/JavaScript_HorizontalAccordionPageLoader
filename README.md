@@ -70,6 +70,16 @@ If you wish to change the ordering of the transitioning (when color fades in and
 
 ```
 
-As you can see the current order is (1) shrink all non-selected divs, (2) expand newly selected div, (3) load short content of formerly selected div, (4) switch formerly selected div back to unselected state, (5) switch newly selected div to selected state, (6) load content of newly selected div, and (7) slap a border on that newly highlighted div. What ordering you do will depend on your priorities and what you want to highlight. There's a good argument for moving up the asynchronous loading(`.load`) of the longer content, so that's likely to take more time and lag. For the purpose I initially coded, I liked this order the best.
+As you can see the current order is 
+
+1. shrink all non-selected divs
+2. expand newly selected div
+3. load short content of formerly selected div 
+4. switch formerly selected div back to unselected state 
+5. switch newly selected div to selected state 
+6. load content of newly selected div
+7. slap a border on that newly highlighted div. 
+
+What ordering you do will depend on your priorities and what you want to highlight. There's a good argument for moving up the asynchronous loading(`.load`) of the longer content, so that's likely to take more time and lag. For the purpose I initially coded, I liked this order the best.
 
 Bug reports and suggested modifications are always welcome. 
