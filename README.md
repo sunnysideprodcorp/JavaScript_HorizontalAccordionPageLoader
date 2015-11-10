@@ -1,4 +1,4 @@
-#h3 Horizontal Accordion Page Loader
+# Horizontal Accordion Page Loader
 
 This JavaScript/jQuery widget creates a horizontal page loader that initially loads short content into mini divs when initially loaded and then loads longer content when a div is selected. 
 
